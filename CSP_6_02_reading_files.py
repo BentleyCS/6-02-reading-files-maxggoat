@@ -8,13 +8,29 @@ def toString(fileName):
     for line in f:
         out += line
     return out
-#print(toString("ExampleText.txt")=="Here is the text\ni am another line")
+print(toString("sample2.txt")=="Here is the text\ni am another line")
 
 def longestLine(fileName):
-    #Given a file return the longest line from within that file
-    pass
+    f = open(fileName)
+    maxline = ""
+    for line in f:
+        if len(line) > len(maxline):
+            maxline = line
+    return maxline
+
+
+print(longestLine("sample2.txt"))
 
 def toBinary(fileName):
+    #f = open(fileName)
+    STR=toString(fileName)
+    out1 = []
+
+    for i in range(0, len(STR), 8):
+        out1.append(STR[i:i+8])
+
+    return out1
     #Given a file that is only 0's and 1's return a list of the file broken into bytes.
     #An example return might be ['01101001', '00101010', '1010']
     pass
+print(toBinary("sample3.txt"))
