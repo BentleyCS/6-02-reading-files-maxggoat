@@ -7,19 +7,25 @@ def toString(fileName):
     out = ""
     for line in f:
         out += line
+    print(out)
     return out
+
+print(toString("sample2.txt"))
+
 print(toString("sample2.txt")=="Here is the text\ni am another line")
 
 def longestLine(fileName):
-    f = open(fileName)
+    f1=toString(fileName)
     maxline = ""
-    for line in f:
+    for line in f1:
+        print(line)
         if len(line) > len(maxline):
             maxline = line
+    print(maxline)
     return maxline
 
 
-print(longestLine("sample2.txt"))
+print(longestLine("sample2.txt")=="Here is the text")
 
 def toBinary(fileName):
     #f = open(fileName)
