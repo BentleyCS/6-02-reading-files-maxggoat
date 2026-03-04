@@ -14,18 +14,21 @@ print(toString("sample2.txt"))
 
 print(toString("sample2.txt")=="Here is the text\ni am another line")
 
-def longestLine(fileName):
-    f1=toString(fileName)
+def longestLine2(fileName):
+    f1 = open(fileName)
     maxline = ""
     for line in f1:
         print(line)
+        print("~~~")
         if len(line) > len(maxline):
             maxline = line
-    print(maxline)
+            print(maxline)
+            print("XX")
+
     return maxline
 
 
-print(longestLine("sample2.txt")=="Here is the text")
+print(longestLine2("sample4.txt")=="the longest line is here\n")
 
 def toBinary(fileName):
     #f = open(fileName)
