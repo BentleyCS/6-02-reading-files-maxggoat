@@ -14,7 +14,7 @@ print(toString("sample2.txt"))
 
 print(toString("sample2.txt")=="Here is the text\ni am another line")
 
-def longestLine2(fileName):
+def longestLine(fileName):
     f1 = open(fileName)
     maxline = ""
     for line in f1:
