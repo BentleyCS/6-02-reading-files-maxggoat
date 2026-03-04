@@ -7,7 +7,6 @@ def toString(fileName):
     out = ""
     for line in f:
         out += line
-    print(out)
     return out
 
 print(toString("sample2.txt"))
@@ -18,17 +17,14 @@ def longestLine(fileName):
     f1 = open(fileName)
     maxline = ""
     for line in f1:
-        print(line)
-        print("~~~")
         if len(line) > len(maxline):
             maxline = line
             print(maxline)
-            print("XX")
 
     return maxline
 
 
-print(longestLine2("sample4.txt")=="the longest line is here\n")
+print(longestLine("sample4.txt")=="the longest line is here\n")
 
 def toBinary(fileName):
     #f = open(fileName)
